@@ -12,4 +12,10 @@ public interface ResultCode {
 
    // 失败返回结果的代码
    public static final Integer ERROR = 20001;
+
+   // 成功返回的消息
+   public static final String SUCCESS_MSG = "成功";
+
+   // 失败返回的消息
+   public static final String FAILURE_MSG = "失败";
 }
