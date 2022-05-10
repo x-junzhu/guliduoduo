@@ -36,6 +36,22 @@ public class Result {
    }
 
    // 链式返回结果
+   public Result success(Boolean success){
+      this.setSuccess(success);
+      this.setMessage(ResultCode.SUCCESS_MSG);
+      this.setCode(ResultCode.SUCCESS);
+      return this;
+   }
+
+   public static Result ok(){
+      return new Result(true, ResultCode.SUCCESS, ResultCode.SUCCESS_MSG);
+   }
+
+   public static Result error(){
+      return new Result(false, ResultCode.ERROR, ResultCode.FAILURE_MSG);
+   }
+
+
    public Result message(String message){
       this.setMessage(message);
       return this;
