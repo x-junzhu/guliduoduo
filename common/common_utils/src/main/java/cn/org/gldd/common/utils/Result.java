@@ -38,6 +38,8 @@ public class Result {
    // 链式返回结果
    public Result success(Boolean success){
       this.setSuccess(success);
+      this.setMessage("成功");
+      this.setCode(20000);
       return this;
    }
 
